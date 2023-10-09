@@ -1,3 +1,13 @@
-.col-6{
-    background-color: grey;
+/*Footer*/ 
+footer{
+    background-color: #470069;
+}
+
+
+.col-12{
+    background-color: #470069;
+}
+
+.col-box1{
+    background-color: aqua;
 }

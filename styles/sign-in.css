@@ -1,0 +1,32 @@
+/*NavBar*/
+.navbar{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+/*Form*/
+.btn.btn-primary{
+    background-color: #470069;
+}
+
+form{
+    width: 600px;
+    margin: auto;
+}
+
+.col-box1{
+    margin-left: 540px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.col-box2{
+    margin-left: 540px;
+    margin-top: 50px;
+}
+
+/*Buttons*/
+.sign-up{
+    
+}
