@@ -1,13 +1,106 @@
 /*Footer*/ 
 footer{
     background-color: #470069;
+    height: 200px;
+}
+.col-box11{
+    margin-left: 50px;
+    padding-top: 70px;
 }
 
-
+/* Home Page Filter Block */
 .col-12{
     background-color: #470069;
+    height: 100px;
+    margin-bottom: 40px;
 }
 
+/* Filter blocks with images */
 .col-box1{
-    background-color: aqua;
+    height: 230px;
+    border-radius: 7px;
+    background-image: url(/assets/Home\ Page\ Image\ 1.png);
+    background-position: center;
+    background-size: cover;
 }
+
+.col-box2{
+    height: 230px;
+    border-radius: 7px;
+    background-image: url(/assets/Home\ Page\ Image\ 2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.col-box3{
+    height: 230px;
+    border-radius: 7px;
+    background-image: url(/assets/Home\ page\ image\ 3.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.col-box4{
+    height: 230px;
+    margin-top: 40px;
+    border-radius: 7px;
+    background-image: url(/assets/Home\ Page\ image\ 4\ copy.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.col-box5{
+    height: 230px;
+    margin-top: 40px;
+    border-radius: 7px;
+    background-image: url(/assets/Home\ Page\ image\ 5.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.col-box6{
+    height: 230px;
+    margin-top: 40px;
+    border-radius: 7px;
+    background-image: url(/assets/Home\ Page\ image\ 6.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/*Text under boxes */
+.col-box7{
+    margin-top: 40px;
+}
+
+/* Continue watching boxes */
+
+.col-box8{
+    height: 230px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 7px;
+    background-image: url(/assets/Bottom\ image\ 1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.col-box9{
+    height: 230px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 7px;
+    background-image: url(/assets/Bottom\ image\ 2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.col-box10{
+    height: 230px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 7px;
+    background-image: url(/assets/Bottom\ image\ 3.png);
+    background-position: center;
+    background-size: cover;
+}
+
