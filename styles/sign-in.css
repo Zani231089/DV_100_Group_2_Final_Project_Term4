@@ -1,13 +1,18 @@
-/*NavBar*/
+/* NavBar */
 .navbar{
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 30px;
 }
 
 
-/*Form*/
+/* Form */
+/* Sign In Button */
 .btn.btn-primary{
     background-color: #470069;
+    margin-left: 230px;
+    width: 150px;
+    margin-top: 20px;
 }
 
 form{
@@ -15,8 +20,9 @@ form{
     margin: auto;
 }
 
+/* Sign in/Sign Up */
 .col-box1{
-    margin-left: 540px;
+    margin-left: 560px;
     margin-top: 70px;
     margin-bottom: 50px;
 }
@@ -26,7 +32,7 @@ form{
     margin-top: 50px;
 }
 
-/*Buttons*/
+/* Buttons */
 .sign-up{
     
 }
