@@ -8,7 +8,7 @@
 
      <!-- Style Sheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/movie.css">
+    <link rel="stylesheet" href="/css/movie.css">
 
 </head>
 <body>
@@ -22,13 +22,37 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link" href="/index.html">Home</a>
-        <a class="nav-link" aria-current="page" href="/pages/libray.html">Movie Library</a>
-        <a class="nav-link" href="/pages/mylist.html">My List</a>
+        <a class="nav-link" href="/pages/libray.html">Movie Library</a>
+        <a class="nav-link" aria-current="page" href="/pages/mylist.html">My List</a>
 
       </div>
     </div>
     </div>
   </nav>
+  
+  <!-- my list -->
+  <div class="container">
+    <h1 class="my-4">Movie Watch List</h1>
+    <h2 class="my-4">TV shows & Movies</h2>
+
+    <!-- Movie List Table -->
+    <div class="container">
+     
+      <!-- Movie List Table -->
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Movie Artwork</th>
+                  <th>Title</th>
+                  <th>Other Relevant Data</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody id="movieList">
+              <!-- Movie items will be dynamically added here from local storage -->
+          </tbody>
+      </table>
+  </div>
 
   <!-- footer -->
   <footer>
@@ -36,18 +60,93 @@
       <div class="col-4">
       </div>
       <div class="col-4">
-        <div class="foot"><img src="assets/logo-white.svg" height="60px" ></div>
+        <div class="foot"><img src="assets/" height="60px" ></div>
         <p>&copy; 2023 Webflix</p>
       </div>
       <div class="col-4">
-        <div class="icon"><a href="https://www.instagram.com/"><img src="assets/instagram.png" height="30px"></a></div>
-        <div class="icon"><a href="https://web.facebook.com/"><img src="assets/facebook.png" height="30px"></a></div>
-        <div class="icon"><a href="https://twitter.com/"><img src="assets/xtwitter.png" height="30px"></a></div>
+        <div class="icon"><a href="https://www.instagram.com/"><img src="/assets/instagram.png" height="30px"></a></div>
+        <div class="icon"><a href="https://web.facebook.com/"><img src="/assets/facebook.png" height="30px"></a></div>
+        <div class="icon"><a href="https://twitter.com/"><img src="/assets/xtwitter.png" height="30px"></a></div>
       </div>
     </div>
   </footer>
 
   <!-- Javascript -->
+  <script>
+    // Function to load movies from local storage and populate the table
+    function loadMoviesFromLocalStorage() {
+        const movieList = JSON.parse(localStorage.getItem('watchlist')) || [];
+
+        // Reference to the table body
+        const tableBody = document.getElementById('movieList');
+
+        // Clear the existing table content
+        tableBody.innerHTML = '';
+
+        // Loop through the movies and add rows to the table
+        movieList.forEach(movie => {
+            const row = document.createElement('tr');
+
+            // Create table cells for movie details
+            const artworkCell = document.createElement('td');
+            const titleCell = document.createElement('td');
+            const dataCell = document.createElement('td');
+            const actionsCell = document.createElement('td');
+
+            // Create an image element for movie artwork
+            const artworkImage = document.createElement('img');
+            artworkImage.src = movie.artwork;
+            artworkImage.alt = 'Movie Poster';
+            artworkImage.className = 'img-thumbnail';
+            artworkImage.width = 100;
+
+            // Add movie details to the cells
+            titleCell.textContent = movie.title;
+            dataCell.textContent = movie.otherData;
+
+            // Create a "Remove" button
+            const removeButton = document.createElement('button');
+            removeButton.className = 'btn btn-danger btn-sm';
+            removeButton.textContent = 'Remove';
+            removeButton.addEventListener('click', () => removeMovieFromWatchList(movie.title));
+
+            // Append elements to cells and cells to the row
+            artworkCell.appendChild(artworkImage);
+            actionsCell.appendChild(removeButton);
+
+            row.appendChild(artworkCell);
+            row.appendChild(titleCell);
+            row.appendChild(dataCell);
+            row.appendChild(actionsCell);
+
+            // Append the row to the table
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Function to remove a movie from the watch list
+    function removeMovieFromWatchList(title) {
+        // Load the current watchlist from local storage
+        const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+
+        // Find the index of the movie with the matching title
+        const index = watchlist.findIndex(movie => movie.title === title);
+
+        if (index !== -1) {
+            // Remove the movie from the watchlist array
+            watchlist.splice(index, 1);
+
+            // Update local storage with the modified watchlist
+            localStorage.setItem('watchlist', JSON.stringify(watchlist));
+
+            // Reload the table to reflect the change
+            loadMoviesFromLocalStorage();
+        }
+    }
+
+    // Load movies from local storage when the page loads
+    loadMoviesFromLocalStorage();
+</script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>

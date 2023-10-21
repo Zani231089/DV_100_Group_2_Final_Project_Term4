@@ -254,6 +254,7 @@ footer{
     text-align: center; 
     color: white; 
     background-color: #470069;
+    background-size: cover;
 }
 
 .foot:hover {
@@ -266,4 +267,7 @@ footer{
 }
 .icon:hover {
     transform: scale(0.9);
+}
+.my-4 {
+    color: #F5F5F5;
 }

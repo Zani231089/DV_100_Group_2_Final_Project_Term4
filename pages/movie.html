@@ -8,7 +8,7 @@
 
      <!-- Style Sheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/movie.css">
+    <link rel="stylesheet" href="/css/movie.css">
 
 </head>
 <body>
@@ -24,11 +24,34 @@
         <a class="nav-link" href="/index.html">Home</a>
         <a class="nav-link" href="/pages/libray.html">Movie Library</a>
         <a class="nav-link" href="/pages/mylist.html">My List</a>
-
         </div>
     </div>
     </div>
   </nav>
+  <!-- Movie -->
+  <div class="container">
+    <h1 class="my-4">Movie Details</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img id="movieArtwork" src="" alt="Movie Poster" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h2 id="movieTitle"></h2>
+            <p><strong>Director:</strong> <span id="movieDirector"></span></p>
+            <p><strong>Actors:</strong> <span id="movieActors"></span></p>
+            <p><strong>Synopsis:</strong> <span id="movieSynopsis"></span></p>
+            <p><strong>Viewer Rating:</strong> <span id="movieRating"></span></p>
+            <p><strong>Box Office:</strong> <span id="boxOfficeInfo"></span></p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h3>Trailer</h3>
+        <div id="movieTrailer" class="embed-responsive embed-responsive-16by9"></div>
+    </div>
+</div>
+
 
   <!-- footer -->
   <footer>
@@ -36,18 +59,48 @@
       <div class="col-4">
       </div>
       <div class="col-4">
-        <div class="foot"><img src="assets/logo-white.svg" height="60px" ></div>
+        <div class="foot"><img src="/assets/" height="60px" ></div>
         <p>&copy; 2023 Webflix</p>
       </div>
       <div class="col-4">
-        <div class="icon"><a href="https://www.instagram.com/"><img src="assets/instagram.png" height="30px"></a></div>
-        <div class="icon"><a href="https://web.facebook.com/"><img src="assets/facebook.png" height="30px"></a></div>
-        <div class="icon"><a href="https://twitter.com/"><img src="assets/xtwitter.png" height="30px"></a></div>
+        <div class="icon"><a href="https://www.instagram.com/"><img src="/assets/instagram.png" height="30px"></a></div>
+        <div class="icon"><a href="https://web.facebook.com/"><img src="/assets/facebook.png" height="30px"></a></div>
+        <div class="icon"><a href="https://twitter.com/"><img src="/assets/xtwitter.png" height="30px"></a></div>
       </div>
     </div>
   </footer>
 
   <!-- Javascript -->
+  <script>// Function to load movie details from your API
+        function loadMovieDetails() {
+            // Fetch movie details from your API and populate the HTML elements
+            const movieId = /* Your movie ID or key */
+            // Replace this with your API URL
+            const apiUrl = `https://your-api.com/movies/${movieId}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    // Populate HTML elements with movie details
+                    document.getElementById('movieArtwork').src = data.artwork;
+                    document.getElementById('movieTitle').textContent = data.title;
+                    document.getElementById('movieDirector').textContent = data.director;
+                    document.getElementById('movieActors').textContent = data.actors;
+                    document.getElementById('movieSynopsis').textContent = data.synopsis;
+                    document.getElementById('movieRating').textContent = data.viewerRating;
+                    document.getElementById('boxOfficeInfo').textContent = data.boxOfficeInfo;
+
+                    // Embed the trailer
+                    const trailerEmbed = document.getElementById('movieTrailer');
+                    trailerEmbed.innerHTML = `<iframe class="embed-responsive-item" src="${data.trailer}"></iframe>`;
+                })
+                .catch(error => {
+                    console.error('Error loading movie details:', error);
+                });
+        }
+
+        // Load movie details when the page loads
+        loadMovieDetails();</script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
