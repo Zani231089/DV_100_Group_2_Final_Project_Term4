@@ -245,15 +245,18 @@ button{
     border-radius: 5px;
 }
 
-
+/* nav bar */
+.navbar-nav {
+    font-family: 'Bebas Neue', sans-serif;
+}
 
 /* footer */
-
 footer{
     height: 345px;
     text-align: center; 
     color: white; 
     background-color: #470069;
+    background-size: cover;
 }
 
 .foot:hover {
@@ -267,3 +270,66 @@ footer{
 .icon:hover {
     transform: scale(0.9);
 }
+.my-4 {
+    color: #F5F5F5;
+}
+
+
+/* Button*/
+.btn-watch {
+    color: #F5F5F5;
+    font-family: 'Bebas Neue', sans-serif;
+    border-color: #F5F5F5;
+}
+.btn-watch:hover {
+    border-color: #F5F5F5;
+    background-color: #F5F5F5;
+    color: #4AB2C2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn-add {
+    color: #F5F5F5;
+    font-family: 'Bebas Neue', sans-serif;
+    border-color: #F5F5F5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+.btn-add:hover {
+    border-color: #F5F5F5;
+    background-color: #F5F5F5;
+    color: #470069;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn-share {
+    color: #F5F5F5;
+    font-family: 'Bebas Neue', sans-serif;
+    border-color: #F5F5F5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn-share:hover {
+    border-color: #F5F5F5;
+    background-color: #F5F5F5;
+    color: #470069;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Card */
+.card {
+    background-color: transparent;
+    border-color: transparent;
+    color: #F5F5F5;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* fonts */
+.container h1,h2{
+    color: #F5F5F5;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
