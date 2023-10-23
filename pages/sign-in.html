@@ -22,19 +22,21 @@
 
       <div class="container col-md-12 xs-6">
         <div class="col-box1">
-          <button type="button" class="btn" style="color: white; "><h4>Sign in</h4></button>\
-          <button type="button" class="btn" style="color: white;"><h4><a href="../pages/sign-up.html"></a> Sign Up</h4></button>
+          <button type="button" class="btn" style="color: white; "><h4>Sign in</h4></button>/
+          <button type="button" class="btn" style="color: white;"><a href="../pages/sign-up.html" style="color: white;"> <h4>Sign Up</h4></a></button>
         </div>
       </div>
 
 
       <div class="container">
         <form id="signinForm" novalidate="">
-            <div class="mb-3" novalidate="">
+
+            <div class="mb-3 form-group">
               <label>Email address</label>
               <input type="email" class="form-control" id="email" name="email" required>
               <div class-="invalid-feedback">Please enter a valid email address</div>
             </div>
+
             <div class="mb-3 form-group">
               <label>Password</label>
               <input type="password" class="form-control" id="password" name="password" minlength="6">
