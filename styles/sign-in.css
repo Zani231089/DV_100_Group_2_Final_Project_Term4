@@ -27,6 +27,11 @@
     margin-top: 30px;
 }
 
+/*Welcome Sign */
+.welcome{
+    margin-top: 50px;
+}
+
 
 /* Form */
 /* Sign In Button */
@@ -45,8 +50,8 @@ form{
 /* Sign in/Sign Up */
 .col-box1{
     margin-left: 560px;
-    margin-top: 70px;
-    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
     background-color: none;
     
 }
@@ -56,7 +61,6 @@ form{
     margin-top: 50px;
 }
 
+
+
 /* Buttons */
-.sign-up{
-    
-}

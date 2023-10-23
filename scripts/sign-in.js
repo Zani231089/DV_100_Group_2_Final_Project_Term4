@@ -11,7 +11,7 @@ $(document).ready(function(){
         if (this.checkValidity() === false){
             event.stopPropagation();
         }else {
-            window.location.href = 'index.html';
+            window.location.href = '';
         }
 
         $(this).addClass('was-validated');
