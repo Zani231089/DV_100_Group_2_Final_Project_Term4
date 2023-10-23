@@ -18,11 +18,18 @@
             <img src="../assets/4LogoPurple.png" width="50px" height="50px">
 
         </div>
-      </nav>
+    </nav>
+
+    <div class="welcome">
+      <h1 style="color: white; text-align: center;">Welcome to WEBFLIX</h1>
+    </div>
+    <div class="slogan">
+      <h6 style="color: white; text-align: center;">"Stream the Dream, Anytime, Anywhere!"</h6>
+    </div>
 
       <div class="container col-md-12 xs-6">
         <div class="col-box1">
-          <button type="button" class="btn" style="color: white; "><a href="../pages/sign-in.html"><h4>Sign in</h4></a></button>\
+          <button type="button" class="btn" style="color: white; "><a href="../pages/sign-in.html" style="color: white;"><h4>Sign in</h4></a></button>\
           <button type="button" class="btn" style="color: white;"><h4>Sign Up</h4></button>
         </div>
       </div>
@@ -30,16 +37,18 @@
 
       <div class="container">
         <form id="signinForm" novalidate="">
-            <div class="mb-3">
-                <label>Username</label>
-                <input type="username" class="form-control" id="username" name="username" required>
-                <div class-="invalid-feedback">Username should have 1 special character</div>
-            </div>
-            <div class="mb-3">
-              <label>Email address</label>
-              <input type="email" class="form-control" id="email" name="email" required>
-              <div class-="invalid-feedback">Please enter a valid email address</div>
-            </div>
+          <div class="mb-3 form-group">
+            <label>Username</label>
+            <input type="username" class="form-control" id="username" name="username" required>
+            <div class="invalid-feedback">Username should contain one special character</div>
+          </div>
+          
+          <div class="mb-3 form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">Enter a valid Email</div>
+          </div>
+
             <div class="mb-3 form-group">
               <label>Password</label>
               <input type="password" class="form-control" id="password" name="password" minlength="6">
@@ -52,7 +61,7 @@
       <div class="container">
         <div class="col-12">
             <div class="col-box2">
-                <h6>Don't have an account?<button type="button" class="btn" style="color: white;"><h6>Sign Up</h6></button>
+                <h6>Already have an account?<button type="button" class="btn" style="color: white;"><a href="../pages/sign-in.html"><h6>Sign In</h6></a></button>
             </div>
         </div>
       </div>
