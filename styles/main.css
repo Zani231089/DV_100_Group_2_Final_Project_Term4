@@ -257,6 +257,7 @@ footer{
 .col-box7{
     margin-top: 40px;
     margin-left: 30px;
+    color: white;
 }
 
 /* Continue watching boxes */
@@ -293,3 +294,46 @@ footer{
     margin-right: 30px;
 }
 
+/* Continue watching for Ngozi */
+
+.line{
+    width: auto;
+    height: 10px;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.line2{
+    width: auto;
+    height: 10px;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.line3{
+    width: auto;
+    height: 10px;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.line-fill{
+    width: 90px;
+    height: 10px;
+    background-color: #470069;
+}
+
+.line-fill2{
+    width: 130px;
+    height: 10px;
+    background-color: #4AB2C2;
+}
+
+.line-fill3{
+    width: 20px;
+    height: 10px;
+    background-color: #4AB2C2;
+}
