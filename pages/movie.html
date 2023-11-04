@@ -43,19 +43,19 @@
     <div class="carousel-inner">
       <div class="carousel-item active" id="carousel-item-active">
         <!-- API -->
-    </div>
+      </div>
+      
       <div class="carousel-item">
         <img src="..." class="d-block w-100" alt="...">
       </div>
       <div class="carousel-caption d-none d-md-block">
         <h1 id="title"></h1>
-        <div id="movie-details">
-          
+        <div id="movie-details">  
       </div>
       <button type="button" id="add-to-watchlist" class="btn btn-watch">WATCH NOW</button></div>
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+      <div id="video-player"></div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -207,6 +207,35 @@
         document.getElementById('add-to-watchlist').addEventListener('click', addToWatchlist);
 
         fetchMovieData();
+
+        function displayVideo(response) {
+        const videoPlayerContainer = document.getElementById('video-player');
+
+        if (response && response.videos && response.videos.length > 0) {
+            // Assuming you want to display the first video from the response
+            const video = response.videos[0];
+
+            // Check if there's a video source
+            if (video.url) {
+                const videoPlayer = document.createElement('iframe');
+                videoPlayer.setAttribute('src', video.url);
+                videoPlayer.setAttribute('width', '100%');
+                videoPlayer.setAttribute('height', '100%');
+                videoPlayer.setAttribute('frameborder', '0');
+                videoPlayer.setAttribute('allowfullscreen', true);
+                videoPlayerContainer.appendChild(videoPlayer);
+            } else {
+                videoPlayerContainer.innerHTML = 'No video available for this movie.';
+            }
+        } else {
+            videoPlayerContainer.innerHTML = 'No video available for this movie.';
+        }
+    }
+
+    // Fetch video information and display it
+    $.ajax(settings).done(function (response) {
+        displayVideo(response);
+    });
     </script>
 
     <script>
