@@ -1,3 +1,26 @@
+/*Background*/
+
+:root {
+    --gradient: linear-gradient(90deg, #4AB2C2, #470069, #F5F5F5);
+  }
+  
+  body {
+    font-family: basic-sans, sans-serif;
+    font-size: 1.125em;
+    line-height: 1.6;
+    color: #333;
+    background: #ddd;
+    background-size: 300%;
+    background-image: var(--gradient);
+    animation: bg-animation 25s infinite alternate;
+  }
+  
+  @keyframes bg-animation {
+    0% {background-position: left}
+    50% {background-position: right}
+    100% {background-position: left}
+  }
+
 /*Footer*/ 
 footer{
     background-color: #470069;
@@ -8,6 +31,15 @@ footer{
     padding-top: 70px;
 }
 
+/*Carousel*/
+.carousel-caption.d-none.d-md-block{
+    color: white;
+}
+
+.arrow{
+    color: white;
+}
+
 /* Home Page Filter Block */
 .col-12{
     background-color: #470069;
@@ -15,34 +47,103 @@ footer{
     margin-bottom: 40px;
 }
 
+.items{
+    margin-left: 20%;
+}
+
+.btn-group.col-auto{
+    width: 80%;
+}
+
 /* Filter blocks with images */
 .col-box1{
     height: 230px;
-    width: 415px;
     border-radius: 7px;
     background-image: url(/assets/Home\ Page\ Image\ 1.png);
     background-position: center;
     background-size: cover;
+    margin-left: 30px;
 }
 
-.overlay{
-    width: 415px;
-    height: 170px;
+.overlay1{
+    height: 230px;
     background-color: rgb(0, 0, 0, 0.5);
     padding-top: 80px;
     opacity: 0;
     border-radius: 7px;
 }
 
-.overlay:hover{
-    cursor: pointer;
-    opacity: 1;
-    
-
+.overlay2{
+    height: 230px;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding-top: 80px;
+    opacity: 0;
+    border-radius: 7px;
 }
 
-.content{
-    width: 415px;
+.overlay3{
+    height: 230px;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding-top: 80px;
+    opacity: 0;
+    border-radius: 7px;
+}
+
+.overlay4{
+    height: 230px;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding-top: 80px;
+    opacity: 0;
+    border-radius: 7px;
+}
+
+.overlay5{
+    height: 230px;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding-top: 80px;
+    opacity: 0;
+    border-radius: 7px;
+}
+
+.overlay6{
+    height: 230px;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding-top: 80px;
+    opacity: 0;
+    border-radius: 7px;
+}
+
+.overlay1:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.overlay2:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.overlay3:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.overlay4:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.overlay5:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.overlay6:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.content1{
     height: 100px;
     background-color: #4AB2C2;
     margin-top: 50px;
@@ -52,11 +153,59 @@ footer{
     border-radius: 7px;
 }
 
-.content h5, p{
-    margin: 0;
+.content2{
+    height: 100px;
+    background-color: #470069;
+    margin-top: 50px;
+    color: wheat;
+    padding-left: 25px;
+    padding-top: 9px;
+    border-radius: 7px;
 }
 
+.content3{
+    height: 100px;
+    background-color: #4AB2C2;
+    margin-top: 50px;
+    color: wheat;
+    padding-left: 25px;
+    padding-top: 9px;
+    border-radius: 7px;
+}
 
+.content4{
+    height: 100px;
+    background-color: #470069;
+    margin-top: 50px;
+    color: wheat;
+    padding-left: 25px;
+    padding-top: 9px;
+    border-radius: 7px;
+}
+
+.content5{
+    height: 100px;
+    background-color: #4AB2C2;
+    margin-top: 50px;
+    color: wheat;
+    padding-left: 25px;
+    padding-top: 9px;
+    border-radius: 7px;
+}
+
+.content6{
+    height: 100px;
+    background-color: #470069;
+    margin-top: 50px;
+    color: wheat;
+    padding-left: 25px;
+    padding-top: 9px;
+    border-radius: 7px;
+}
+
+.content1 h5, p{
+    margin: 0;
+}
 
 .col-box2{
     height: 230px;
@@ -72,6 +221,7 @@ footer{
     background-image: url(/assets/Home\ page\ image\ 3.png);
     background-position: center;
     background-size: cover;
+    margin-right: 30px;
 }
 
 .col-box4{
@@ -81,6 +231,7 @@ footer{
     background-image: url(/assets/Home\ Page\ image\ 4\ copy.png);
     background-position: center;
     background-size: cover;
+    margin-left: 30px;
 }
 
 .col-box5{
@@ -99,11 +250,14 @@ footer{
     background-image: url(/assets/Home\ Page\ image\ 6.png);
     background-position: center;
     background-size: cover;
+    margin-right: 30px;
 }
 
 /*Text under boxes */
 .col-box7{
     margin-top: 40px;
+    margin-left: 30px;
+    color: white;
 }
 
 /* Continue watching boxes */
@@ -116,6 +270,7 @@ footer{
     background-image: url(/assets/Bottom\ image\ 1.png);
     background-position: center;
     background-size: cover;
+    margin-left: 30px;
 }
 
 .col-box9{
@@ -136,5 +291,49 @@ footer{
     background-image: url(/assets/Bottom\ image\ 3.png);
     background-position: center;
     background-size: cover;
+    margin-right: 30px;
 }
 
+/* Continue watching for Ngozi */
+
+.line{
+    width: auto;
+    height: 10px;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.line2{
+    width: auto;
+    height: 10px;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.line3{
+    width: auto;
+    height: 10px;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.line-fill{
+    width: 90px;
+    height: 10px;
+    background-color: #470069;
+}
+
+.line-fill2{
+    width: 130px;
+    height: 10px;
+    background-color: #4AB2C2;
+}
+
+.line-fill3{
+    width: 20px;
+    height: 10px;
+    background-color: #4AB2C2;
+}
