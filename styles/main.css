@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /*Background*/
 
 :root {
@@ -21,24 +20,6 @@
     50% {background-position: right}
     100% {background-position: left}
   }
-
-/*Nav*/
-nav{
-    color: white;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-.navbar-nav{
-    color: white;
-}
-
-.nav-link{
-    color: white;
-}
-
-.nav-link.active{
-    color: #4AB2C2;
-}
 
 /*Footer*/ 
 footer{
@@ -84,154 +65,6 @@ footer{
     margin-left: 30px;
 }
 
-.overlay1{
-    height: 230px;
-    background-color: rgb(0, 0, 0, 0.5);
-    padding-top: 80px;
-    opacity: 0;
-    border-radius: 7px;
-}
-
-.overlay2{
-    height: 230px;
-    background-color: rgb(0, 0, 0, 0.5);
-    padding-top: 80px;
-    opacity: 0;
-    border-radius: 7px;
-}
-
-.overlay3{
-    height: 230px;
-    background-color: rgb(0, 0, 0, 0.5);
-    padding-top: 80px;
-    opacity: 0;
-    border-radius: 7px;
-}
-
-.overlay4{
-    height: 230px;
-    background-color: rgb(0, 0, 0, 0.5);
-    padding-top: 80px;
-    opacity: 0;
-    border-radius: 7px;
-}
-
-.overlay5{
-    height: 230px;
-    background-color: rgb(0, 0, 0, 0.5);
-    padding-top: 80px;
-    opacity: 0;
-    border-radius: 7px;
-}
-
-.overlay6{
-    height: 230px;
-    background-color: rgb(0, 0, 0, 0.5);
-    padding-top: 80px;
-    opacity: 0;
-    border-radius: 7px;
-}
-
-.overlay1:hover{
-    cursor: pointer;
-    opacity: 1;
-}
-
-.overlay2:hover{
-    cursor: pointer;
-    opacity: 1;
-}
-
-.overlay3:hover{
-    cursor: pointer;
-    opacity: 1;
-}
-
-.overlay4:hover{
-    cursor: pointer;
-    opacity: 1;
-}
-
-.overlay5:hover{
-    cursor: pointer;
-    opacity: 1;
-}
-
-.overlay6:hover{
-    cursor: pointer;
-    opacity: 1;
-}
-
-.content1{
-    height: 100px;
-    background-color: #4AB2C2;
-    margin-top: 50px;
-    color: wheat;
-    padding-left: 25px;
-    padding-top: 9px;
-    border-radius: 7px;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-.content2{
-    height: 100px;
-    background-color: #470069;
-    margin-top: 50px;
-    color: wheat;
-    padding-left: 25px;
-    padding-top: 9px;
-    border-radius: 7px;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-.content3{
-    height: 100px;
-    background-color: #4AB2C2;
-    margin-top: 50px;
-    color: wheat;
-    padding-left: 25px;
-    padding-top: 9px;
-    border-radius: 7px;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-.content4{
-    height: 100px;
-    background-color: #470069;
-    margin-top: 50px;
-    color: wheat;
-    padding-left: 25px;
-    padding-top: 9px;
-    border-radius: 7px;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-.content5{
-    height: 100px;
-    background-color: #4AB2C2;
-    margin-top: 50px;
-    color: wheat;
-    padding-left: 25px;
-    padding-top: 9px;
-    border-radius: 7px;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-.content6{
-    height: 100px;
-    background-color: #470069;
-    margin-top: 50px;
-    color: wheat;
-    padding-left: 25px;
-    padding-top: 9px;
-    border-radius: 7px;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-.content1 h5, p{
-    margin: 0;
-}
-
 .col-box2{
     height: 230px;
     border-radius: 7px;
@@ -249,42 +82,13 @@ footer{
     margin-right: 30px;
 }
 
-.col-box4{
-    height: 230px;
-    margin-top: 40px;
-    border-radius: 7px;
-    background-image: url(/assets/Home\ Page\ image\ 4\ copy.png);
-    background-position: center;
-    background-size: cover;
-    margin-left: 30px;
-}
 
-.col-box5{
-    height: 230px;
-    margin-top: 40px;
-    border-radius: 7px;
-    background-image: url(/assets/Home\ Page\ image\ 5.png);
-    background-position: center;
-    background-size: cover;
-}
-
-.col-box6{
-    height: 230px;
-    margin-top: 40px;
-    border-radius: 7px;
-    background-image: url(/assets/Home\ Page\ image\ 6.png);
-    background-position: center;
-    background-size: cover;
-    margin-right: 30px;
-}
 
 /*Text under boxes */
 .col-box7{
     margin-top: 40px;
     margin-left: 30px;
     color: white;
-    font-family: Urbanist;
-    font-weight: 200;
 }
 
 /* Continue watching boxes */
@@ -364,3 +168,104 @@ footer{
     height: 10px;
     background-color: #4AB2C2;
 }
+
+/*New ones Imported*/
+
+h5{
+    font-weight: bold;
+}
+
+body{
+    margin: 0;
+    background-color: #F5F5F5;
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #470069;
+}
+
+.search{
+    background-color: transparent;
+    border: 2px solid var(#F5F5F5);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: white;
+
+}
+
+.search:focus{
+    outline: 0;
+    background-color: #470069;
+}
+
+.search::placeholder{
+    color: #7378c5;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie{
+    width: 250px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: #4AB2C2;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.movie img{
+    width: 100%;
+    height: 260px;
+}
+
+.movie-info{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 3rem 1rem;
+    letter-spacing: 0.5px;
+    height: 100px;
+}
+
+.movie-info h3{
+    margin-top: 0;
+}
+
+.movie-info span{
+    background-color: #470069;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #470069;
+    padding: 1rem;
+    color: #F5F5F5;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+    font-size: small;
+    font-weight: 100;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
+
