@@ -43,5 +43,5 @@ function showMovies(data) {
 }
 
 
-
 getMovies(API_URL);
+

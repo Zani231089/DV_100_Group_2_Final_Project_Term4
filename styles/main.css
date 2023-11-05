@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 /*Background*/
 
 :root {
@@ -21,6 +24,19 @@
     100% {background-position: left}
   }
 
+
+/*Navbar*/
+
+.log-out{
+    margin-left: 950px;
+    background-color: #470069;
+}
+
+nav{
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+}
+
 /*Footer*/ 
 footer{
     background-color: #470069;
@@ -34,6 +50,83 @@ footer{
 /*Carousel*/
 .carousel-caption.d-none.d-md-block{
     color: white;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.carousel-inner{
+    height: 670px;
+    color: white;
+}
+
+.image2{
+    background-image: url(../assets/Home\ page\ image\ 3.png);
+    background-position: center;
+    background-size: cover;
+    height: 670px;
+}
+
+.image3{
+    background-image: url(../assets/Home\ Page\ image\ 6.png);
+    background-size: cover;
+    height: 670px;
+}
+
+.image1{
+    background-image: url(../assets/Bottom\ image\ 1.png);
+    background-size: cover;
+    height: 670px;
+}
+
+.par1 h1{
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Urbanist', sans-serif;
+    margin-left: 140px; 
+    padding-top: 150px;
+    color: #4AB2C2;
+}
+
+.par2 h1{
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Urbanist', sans-serif;
+    margin-left: 140px; 
+    padding-top: 150px;
+}
+
+.par3 h3{
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.par1 p{
+    font-family: basic-sans, sans-serif;
+    margin-left: 140px;
+    margin-top: 10px;
+    text-align: left;
+    margin-right: 100px;
+    color: white;
+}
+
+.par2 p{
+    font-family: basic-sans, sans-serif;
+    margin-left: 140px;
+    margin-top: 10px;
+    text-align: left;
+    margin-right: 100px;
+}
+
+.par3 p{
+    font-family: basic-sans, sans-serif;
+}
+
+.button-group{
+    padding-left: 140px;
+}
+
+.carousel-indicators{
+    margin-top: 20px;
 }
 
 .arrow{
