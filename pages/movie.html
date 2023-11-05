@@ -72,7 +72,6 @@
     <div class="row">
         <div class="col-4">
           <div class="card" style="width: 18rem; margin-top: 40px; margin-bottom: 40px; margin-left:30px;">
-            <img src="/assets/overview.jpeg" class="card-img-top" alt="overview">
             <div class="card-body">
               <h4 class="card-title">Overview</h4>
               <p id="overview"></p>
@@ -82,20 +81,20 @@
           
         <div class="col-4">
           <div class="card" style="width: 18rem; margin-top: 40px; margin-bottom: 40px;">
-            <img src="/assets/Genre.jpeg" class="card-img-top" alt="genre">
+            
             <div class="card-body">
               <h4 class="card-title">Genre</h4>
-              <p id="genre"></p>
+              <p id="genre-content"></p>
             </div>
           </div>
         </div>
 
         <div class="col-4">
           <div class="card" style="width: 18rem; margin-top: 40px; margin-bottom: 40px;">
-            <img src="/assets/Rating.jpeg" class="card-img-top" alt="rating">
+            
             <div class="card-body">
               <h4 class="card-title">Rating</h4>
-              <p id="rating"></p>
+              <p id="rating-content"></p>
             </div>
           </div>
         </div>
@@ -124,17 +123,10 @@
     <div class="row">
       <div class="col-4">
         <div class="card" style="width: 18rem; margin-top: 40px; margin-left: 30px; margin-bottom: 40px;">
-          <img src="/assets/movie-5.png" class="card-img-top" alt="...">
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card" style="width: 18rem; margin-top: 40px; margin-bottom: 40px;">
-          <img src="/assets/movie-2.png" class="card-img-top" alt="...">
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card" style="width: 18rem; margin-top: 40px; margin-bottom: 40px;">
-          <img src="/assets/movie-3.png" class="card-img-top" alt="...">
+          
+            <div id="similar-movies" class="d-flex flex-wrap">
+                <!-- Similar movies will be displayed here -->
+            </div>
         </div>
       </div>
     </div>
@@ -234,34 +226,143 @@
     </script>
 
     <script>
-        const settings = {
-            async: true,
-            crossDomain: true,
-            url: 'https://online-movie-database.p.rapidapi.com/title/get-images?tconst=tt0944947&limit=25',
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '5ec1854ce7msh45029c5cccc4867p123d5fjsnccaa8e5fbe32',
-                'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-            }
-        };
+        // Image data
+    const imageSettings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://online-movie-database.p.rapidapi.com/title/get-images?tconst=tt0944947&limit=25',
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '5ec1854ce7msh45029c5cccc4867p123d5fjsnccaa8e5fbe32',
+            'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
+        }
+    };
 
-        $.ajax(settings).done(function (response) {
-            // Check if the response contains image URLs
-            if (response && response.images) {
-                const activeCarouselItem = $("#carousel-item-active");
+    // Overview data
+    const overviewSettings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://online-movie-database.p.rapidapi.com/title/get-overview-details?tconst=tt0944947&currentCountry=US',
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '5ec1854ce7msh45029c5cccc4867p123d5fjsnccaa8e5fbe32',
+            'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
+        }
+    };
 
-                // Iterate through the image URLs and create image elements to add to the carousel item
-                response.images.forEach(function (image) {
-                    const imgElement = document.createElement("img");
-                    imgElement.setAttribute("src", image);
-                    imgElement.setAttribute("class", "d-block w-100");
-                    activeCarouselItem.append(imgElement);
-                });
-            } else {
-                // Handle the case where there are no images in the response
-                console.log("No images found in the response.");
-            }
+    // Fetch and display image data
+    $.ajax(imageSettings).done(function (imageResponse) {
+        // Check if the response contains image URLs
+        if (imageResponse && imageResponse.images) {
+            const activeCarouselItem = $("#carousel-item-active");
+
+            // Iterate through the image URLs and create image elements to add to the carousel item
+            imageResponse.images.forEach(function (image) {
+                const imgElement = document.createElement("img");
+                imgElement.setAttribute("src", image);
+                imgElement.setAttribute("class", "d-block w-100");
+                activeCarouselItem.append(imgElement);
+            });
+        } else {
+            // Handle the case where there are no images in the response
+            console.log("No images found in the response.");
+        }
+    });
+
+    // Fetch and display overview data
+    $.ajax(overviewSettings).done(function (overviewResponse) {
+        // Extract the overview content from the response
+        const overview = overviewResponse.overview;
+
+        // Find the element where you want to display the overview
+        const overviewContent = document.getElementById('overview-content');
+
+        // Set the retrieved overview content to the HTML element
+        overviewContent.textContent = overview;
+    });
+        // Rating data
+        const ratingSettings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://online-movie-database.p.rapidapi.com/title/get-ratings?tconst=tt0944947',
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '5ec1854ce7msh45029c5cccc4867p123d5fjsnccaa8e5fbe32',
+            'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
+        }
+    };
+
+    // Fetch and display rating data
+    $.ajax(ratingSettings).done(function (ratingResponse) {
+        // Extract the rating content from the response
+        const rating = ratingResponse.ip;
+
+        // Find the element where you want to display the rating
+        const ratingContent = document.getElementById('rating-content');
+
+        // Set the retrieved rating content to the HTML element
+        ratingContent.textContent = `Rating: ${rating}`;
+    });
+
+    // Genre data
+    const genreSettings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://online-movie-database.p.rapidapi.com/title/get-genres?tconst=tt0944947',
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '5ec1854ce7msh45029c5cccc4867p123d5fjsnccaa8e5fbe32',
+            'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
+        }
+    };
+
+    // Fetch and display genre data
+    $.ajax(genreSettings).done(function (genreResponse) {
+        // Extract the genre content from the response
+        const genre = genreResponse.genres.join(', '); // Assuming genres is an array
+
+        // Find the element where you want to display the genre
+        const genreContent = document.getElementById('genre-content');
+
+        // Set the retrieved genre content to the HTML element
+        genreContent.textContent = `Genre: ${genre}`;
+    });
+
+    // More like this data
+    const moreLikeThisSettings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://online-movie-database.p.rapidapi.com/title/get-more-like-this?tconst=tt0944947&currentCountry=US&purchaseCountry=US',
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '5ec1854ce7msh45029c5cccc4867p123d5fjsnccaa8e5fbe32',
+            'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
+        }
+    };
+
+    // Fetch and display more like this data
+    $.ajax(moreLikeThisSettings).done(function (moreLikeThisResponse) {
+        const similarMoviesContainer = document.getElementById('similar-movies');
+
+        // Iterate through the similar movies data and create elements for each movie
+        moreLikeThisResponse.forEach(function (movie) {
+            const movieCard = document.createElement('div');
+            movieCard.className = 'card m-2';
+            
+            const movieImage = document.createElement('img');
+            movieImage.className = 'card-img-top';
+            movieImage.src = movie.image_url;
+            
+            const movieTitle = document.createElement('div');
+            movieTitle.className = 'card-body';
+            movieTitle.textContent = movie.title;
+            
+            movieCard.appendChild(movieImage);
+            movieCard.appendChild(movieTitle);
+            
+            similarMoviesContainer.appendChild(movieCard);
         });
+    });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
