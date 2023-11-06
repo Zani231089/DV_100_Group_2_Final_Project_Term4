@@ -37,15 +37,30 @@ nav{
     color: white;
 }
 
-/*Footer*/ 
+/* footer */
 footer{
+    height: 345px;
+    text-align: center; 
+    color: white; 
     background-color: #470069;
-    height: 200px;
+    background-size: cover;
 }
-.col-box11{
-    margin-left: 50px;
-    padding-top: 70px;
+
+.foot:hover {
+    transform: scale(1.1);
 }
+
+.icon{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.icon:hover {
+    transform: scale(0.9);
+}
+.my-4 {
+    color: #F5F5F5;
+}
+
 
 /*Carousel*/
 .carousel-caption.d-none.d-md-block{
