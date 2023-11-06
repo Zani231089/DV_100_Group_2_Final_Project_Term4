@@ -188,7 +188,7 @@ function showMovies(data) {
             <h3>Overview</h3>
             ${overview};
         </div>
-        <button class="btn btn-primary" onclick="seeMore(this, ${JSON.stringify(movie)})">See More</button>
+        <button id="see-more-button" class="btn btn-primary" onclick="seeMore(this, ${JSON.stringify(movie)})">See More</button>
         <button class="btn btn-secondary">Add to Favorites</button>
         `;
         main.appendChild(movieElement);
@@ -200,7 +200,7 @@ function seeMore(button, movie) {
     localStorage.setItem('selectedMovie', JSON.stringify(movie));
   
     // Redirect to the "individual movie" page
-    window.location.href = 'movie-details.html';
+    window.location.href = '../movie.html';
   }
   
 
@@ -238,5 +238,4 @@ form.addEventListener('submit', (e) => {
 const saveMovieData ={
 
 }
-
 
