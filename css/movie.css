@@ -247,7 +247,8 @@ button{
 
 /* nav bar */
 .navbar-nav {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+
 }
 
 /* footer */
@@ -331,7 +332,8 @@ footer{
 /* fonts */
 .container h1,h2{
     color: #F5F5F5;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+
 }
 
 
